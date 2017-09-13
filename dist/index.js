@@ -32,18 +32,16 @@ function update() {
 
   // Toggle input placeholder color
   $("#query").toggleClass("white", color.luminance() < 0.5)
-
   // Find color names
-  var colors = colorNamer(color.hex(), 'ntc')
-
+  var colors = colorNamer(color.hex(), {keep: 'colornamelist'})
+  console.log(colors)
   // Refresh list
-  colors.forEach(function(c) {
+  colors.colornamelist.forEach(function(c) {
     $("#colors").append(ich.color(c))
   })
 }
 
 $(function(){
-  $("#query").on('keyup', update)
   $("#query").on('change', update)
 
   $("form").on('submit', function(e) {
