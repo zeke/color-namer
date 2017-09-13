@@ -10,7 +10,8 @@ var lists = {
   ntc: require('./lib/colors/ntc'),
   pantone: require('./lib/colors/pantone'),
   roygbiv: require('./lib/colors/roygbiv'),
-  x11: require('./lib/colors/x11')
+  x11: require('./lib/colors/x11'),
+  colornamelist: require('color-name-list')
 }
 
 var namer = module.exports = function(color, options) {
