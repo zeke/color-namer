@@ -112,6 +112,13 @@ var names = namer(color, { omit: ['pantone', 'roygbiv'] })
 // output: { basic: [...], html: [...], x11: [...], ntc: [...] }
 ```
 
+### options.lists
+Use custom color lists object
+
+```js
+var names = namer(color, { lists: { custom: require('/path/to/custom.js')}})
+```
+
 ## Tests
 
 ```

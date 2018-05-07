@@ -16,16 +16,18 @@ var lists = {
 var namer = module.exports = function(color, options) {
   options = options || {}
 
+  var colorLists = options.lists || lists;
+  
   color = chroma(color)
   var results = {}
-  for (var key in lists) {
+  for (var key in colorLists) {
     if (options.pick && options.pick.indexOf(key) === -1) {
       continue
     }
     if (options.omit && options.omit.indexOf(key) !== -1) {
       continue
     }
-    results[key] = lists[key]
+    results[key] = colorLists[key]
       .map (function(name) {
         name.distance = chroma.distance(color, chroma(name.hex))
         return name

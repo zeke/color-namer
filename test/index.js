@@ -90,6 +90,25 @@ suite('namer', function () {
       assert.equal(names.basic, undefined)
       assert.equal(names.pantone, undefined)
     })
-  })
 
+    test('can receive `lists` option', function () {
+      var custom = [{
+          name: 'black',
+          hex: '#000000'
+        },
+        {
+          name: 'mygold',
+          hex: '#FFD700'
+        },
+      ];
+      var names = namer("hsl(50,100%,50%)", {
+        lists: {
+          custom: custom
+        }
+      })
+      assert(Array.isArray(names.custom))
+      assert.equal(Object.keys(names).length, 1)
+      assert.equal(names.custom[0].name, 'mygold')
+    })
+  })
 })
