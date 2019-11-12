@@ -37,7 +37,7 @@ function update() {
   var colors = colorNamer(color.hex(), 'ntc')
 
   // Refresh list
-  colors.forEach(function(c) {
+  colors.ntc.forEach(function(c) {
     $("#colors").append(ich.color(c))
   })
 }

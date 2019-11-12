@@ -23,6 +23,7 @@ The color names are derived from several lists:
 - [x11](lib/colors/x11.js) - The list that preceded the HTML color names
 - [pantone](lib/colors/pantone.js)
 - [ntc](lib/colors/ntc.js), an [astounding collection](http://chir.ag/projects/ntc/) of over 1500 named colors.
+- [zeplin](lib/colors/zeplin.js), Color palette from [Zeplin app](https://github.com/zeplin/zeplin-palette)
 
 
 ## Installation
@@ -49,6 +50,7 @@ names.html
 names.x11
 names.pantone
 names.ntc
+names.zeplin
 ```
 
 Each list is an array of colors, sorted by their perceptual similarity to the given color:
@@ -109,7 +111,7 @@ The opposite of `options.pick`.
 
 ```js
 var names = namer(color, { omit: ['pantone', 'roygbiv'] })
-// output: { basic: [...], html: [...], x11: [...], ntc: [...] }
+// output: { basic: [...], html: [...], x11: [...], ntc: [...], zeplin: [...] }
 ```
 
 ### options.distance

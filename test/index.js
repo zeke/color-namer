@@ -18,6 +18,7 @@ suite('namer', function () {
     assert(names.pantone)
     assert(names.roygbiv)
     assert(names.x11)
+    assert(names.zeplin)
     assert.equal(names.basic[0].distance, 0)
   })
 
