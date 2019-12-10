@@ -120,6 +120,21 @@ var names = namer(color, { pick: ['basic'], distance: 'deltaE' });
 // output: { basic: [...] }
 ```
 
+## Custom Lists
+
+### namer.addList(name, path)
+Support one (or multiple) custom lists
+
+```js
+  var namer = require('color-namer')
+
+  // add custom list
+  namer.addList('custom', './test/custom-list.js')
+
+  var names = namer('885418', { pick: ['custom'] })
+  // output: { custom: [...] }
+```
+
 ### 
 
 ## Tests
