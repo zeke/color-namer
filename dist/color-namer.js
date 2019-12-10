@@ -50,8 +50,8 @@ var namer = module.exports = function(color, options) {
 namer.chroma = chroma
 namer.lists = lists
 
-namer.addList = function(name, path) {
-  lists[name] = require(path)
+namer.addList = function(name, list) {
+  lists[name] = list
 }
 },{"./lib/colors/basic":2,"./lib/colors/html":3,"./lib/colors/ntc":4,"./lib/colors/pantone":5,"./lib/colors/roygbiv":6,"./lib/colors/x11":7,"chroma-js":8,"es6-weak-map":60}],2:[function(require,module,exports){
 module.exports = [
