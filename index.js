@@ -49,6 +49,6 @@ var namer = module.exports = function(color, options) {
 namer.chroma = chroma
 namer.lists = lists
 
-namer.addList = function(name, path) {
-  lists[name] = require(path)
+namer.addList = function(name, list) {
+  lists[name] = list
 }
