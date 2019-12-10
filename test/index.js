@@ -99,4 +99,23 @@ suite('namer', function () {
     })
   })
 
+  suite('custom list', function () {
+
+    test('should be able to add a new custom list', function () {
+      const key = 'custom'
+      namer.addList(key, './test/custom-list.js')
+      const listKeys = Object.keys(namer.lists)
+      assert.equal(listKeys.includes(key), true)
+    })
+
+    test('should be able to find a custom color in the custom list', function () {
+      const key = 'custom'
+      namer.addList(key, require('./custom-list.js'))
+
+      var names = namer('885418')
+      assert.equal(names[key][0].hex, '#885418')
+      assert.equal(names[key][0].name, 'brown')
+      assert.equal(names[key][0].distance, 0)
+    })
+  })
 })
